@@ -1,4 +1,4 @@
-package pl.javastart.zad1;
+package pl.javastart.zad1.model;
 
 public enum Category {
     SPOZYWCZE ("Art. spożywcze"),

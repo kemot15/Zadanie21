@@ -5,25 +5,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import pl.javastart.zad1.Category;
-import pl.javastart.zad1.Product;
-import pl.javastart.zad1.ProductsRepository;
+import pl.javastart.zad1.model.Category;
+import pl.javastart.zad1.model.Product;
+import pl.javastart.zad1.repository.ProductRepository;
 
 import java.util.List;
 
 @Controller
-public class ProductControler {
+public class ProductController {
 
-    private ProductsRepository productsRepository;
+    private ProductRepository productRepository;
 
-    public ProductControler(ProductsRepository productsRepository) {
-        this.productsRepository = productsRepository;
+    public ProductController(ProductRepository productRepository) {
+        this.productRepository = productRepository;
     }
 
     @GetMapping("/lista")
     @ResponseBody
     public String showList (@RequestParam (required = false, name ="kategoria")String category){
-        List<Product> products = productsRepository.getProducts();
+        List<Product> products = productRepository.getProducts();
         String result =  "<h2>Lista produktów</h2><table style=\"border: solid\"><tr><th>Nazwa</th><th>Cena</th><th>Kategoria</th></tr>";
 
         double sum = 0;
@@ -45,9 +45,9 @@ public class ProductControler {
     }
 
     @PostMapping("/add")
-    public String addProduct (@RequestParam String name, @RequestParam String price, @RequestParam String category){
-        Product product = new Product(name, Double.valueOf(price), Category.valueOf(category));
-        productsRepository.add(product);
+    public String addProduct (@RequestParam String name, @RequestParam double price, @RequestParam Category category){
+        Product product = new Product(name, price, category);
+        productRepository.add(product);
         return ("redirect:/lista");
     }
 }

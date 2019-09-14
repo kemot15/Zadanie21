@@ -1,4 +1,6 @@
-package pl.javastart.zad1;
+package pl.javastart.zad1.model;
+
+import pl.javastart.zad1.model.Category;
 
 public class Product {
     private String name;

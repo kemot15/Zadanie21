@@ -1,16 +1,18 @@
-package pl.javastart.zad1;
+package pl.javastart.zad1.repository;
 
 import org.springframework.stereotype.Repository;
+import pl.javastart.zad1.model.Category;
+import pl.javastart.zad1.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class ProductsRepository {
+public class ProductRepository {
 
     private List<Product> products;
 
-    public ProductsRepository() {
+    public ProductRepository() {
         products = new ArrayList<>();
         products.add(new Product("ser", 2.5, Category.SPOZYWCZE));
         products.add(new Product("młotek", 12.5, Category.DOMOWE));
