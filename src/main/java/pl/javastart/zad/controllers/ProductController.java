@@ -1,13 +1,13 @@
-package pl.javastart.zad1.controllers;
+package pl.javastart.zad.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import pl.javastart.zad1.model.Category;
-import pl.javastart.zad1.model.Product;
-import pl.javastart.zad1.repository.ProductRepository;
+import pl.javastart.zad.model.Category;
+import pl.javastart.zad.model.Product;
+import pl.javastart.zad.repository.ProductRepository;
 
 import java.util.List;
 

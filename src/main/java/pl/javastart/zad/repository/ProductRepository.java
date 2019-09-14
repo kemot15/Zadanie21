@@ -1,8 +1,8 @@
-package pl.javastart.zad1.repository;
+package pl.javastart.zad.repository;
 
 import org.springframework.stereotype.Repository;
-import pl.javastart.zad1.model.Category;
-import pl.javastart.zad1.model.Product;
+import pl.javastart.zad.model.Category;
+import pl.javastart.zad.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;

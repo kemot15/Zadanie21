@@ -1,4 +1,4 @@
-package pl.javastart.zad1;
+package pl.javastart.zad;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
